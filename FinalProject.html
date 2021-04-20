@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Anyone can knit</title>
+    <style>
+      h1 {
+        font-family: serif;
+        text-align: center;
+        color: #388793;
+      }
+      h2 {
+        text-align: center;
+        color: #3b4b51;
+        font-weight: normal;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+      }
+      p {
+        text-align: center;
+        color: #3b4b51;
+        line-height: 25px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background: linear-gradient(#59b2bc, #a2aca2);
+        font-size: 15px;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Knitting is fun!</h1>
+    <h2>And <em>you</em> can <strong>absolutely</strong> do it too.</h2>
+    <div>
+      <img
+        src="https://www.mykidstime.com/wp-content/uploads/2016/01/knitting.jpg"
+        width="300"
+      />
+      <p>
+        Many people are intimidated by the ancient craft of kniting. But for
+        those who are patient and diligent, the craft is easy to learn, fun, and
+        rewarding. Imagine making your own hats, scarves, sweaters, and cozy
+        hand-knit socks.
+        <br />
+        <br />
+        With a little practice, you could be wearing your own designs.
+      </p>
+
+      <button class="learnToKnit">Learn to knit</button>
+    </div>
+    <hr />
+    <p>
+      This page was built by
+      <a href="https://www.ravelry.com/people/katisawesome">Kat Sundquist</a>
+    </p>
+    <script>
+      function learnKnitting() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let canYouKnit = prompt("Do you already know how to knit?");
+
+        if (canYouKnit === "Yes" || "yes") {
+          alert("Go you, " + name);
+        } else {
+          alert(
+            "Thank you " + name + ".  We'll be sending you information soon!"
+          );
+        }
+      }
+      let learnButton = document.querySelector(".learnToKnit");
+      learnButton.addEventListener("click", learnKnitting);
+    </script>
+  </body>
+</html>
